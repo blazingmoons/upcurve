@@ -1,4 +1,4 @@
-/*A Java program to generate a calendar for given month and year*/
+/*Java program to generate a calendar for given month and year*/
 
 
 package com.targetindia.programs;
@@ -21,7 +21,7 @@ public class Calendar {
     }
 
     private static boolean isValidYear(int year) {
-        return year >= 0; // Assuming year 0 or greater is valid
+        return year >= 0; 
     }
 
     private static int getDaysInMonth(int month, int year) {
