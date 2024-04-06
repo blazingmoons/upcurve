@@ -1,4 +1,5 @@
 // Java program to reverse a string
+package com.targetindia.programs;
 import java.util.*;
 class  RevStr{
 
