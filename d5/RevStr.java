@@ -8,7 +8,7 @@ class RevStr {
 	static void reverse(char str[], int start, int end) {
 
 		char temp;
-		char t;
+		
 
 		while (start <= end) {
 
