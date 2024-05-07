@@ -1,16 +1,17 @@
 // Java program to reverse a string
 package com.targetindia.programs;
-import java.util.*;
-class  RevStr{
 
-	
-	static void reverse(char str[], int start, int end)
-	{
+import java.util.*;
+
+class RevStr {
+
+	static void reverse(char str[], int start, int end) {
 
 		char temp;
+		char t;
 
 		while (start <= end) {
-			
+
 			temp = str[start];
 			str[start] = str[end];
 			str[end] = temp;
@@ -18,10 +19,9 @@ class  RevStr{
 			end--;
 		}
 	}
-	
-	static char[] reverseWords(char[] s)
-	{
-		
+
+	static char[] reverseWords(char[] s) {
+
 		int start = 0;
 		for (int end = 0; end < s.length; end++) {
 			if (s[end] == ' ') {
@@ -30,7 +30,7 @@ class  RevStr{
 			}
 		}
 
-		//  last word
+		// last word
 		reverse(s, start, s.length - 1);
 
 		// Reverse the entire String
@@ -39,14 +39,10 @@ class  RevStr{
 	}
 
 	//
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		String s = "i like this program very much ";
 
-	
 		char[] p = reverseWords(s.toCharArray());
 		System.out.print(p);
 	}
 }
-
-
