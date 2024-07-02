@@ -1,48 +1,24 @@
-// Java program to reverse a string
-package com.targetindia.programs;
-
 import java.util.*;
 
-class RevStr {
-
-	static void reverse(char str[], int start, int end) {
-
-		char temp;
-		char tt; // does not matter
-
-		while (start <= end) {
-
-			temp = str[start];
-			str[start] = str[end];
-			str[end] = temp;
-			start++;
-			end--;
-		}
-	}
-
-	static char[] reverseWords(char[] s) {
-
-		int start = 0;
-		for (int end = 0; end < s.length; end++) {
-			if (s[end] == ' ') {
-				reverse(s, start, end);
-				start = end + 1;
+public class RevStr {
+	public String reverseByWords(String sentence) {
+		String[] words = sentence.split(" ");
+		String revSentence = "";
+		for (int i = words.length - 1; i >= 0; i--) {
+			revSentence += words[i];
+			if (i > 0) {
+				revSentence += " ";
 			}
 		}
-
-		// last word
-		reverse(s, start, s.length - 1);
-
-		// Reverse the entire String
-		reverse(s, 0, s.length - 1);
-		return s;
+		return revSentence;
 	}
 
-	//
 	public static void main(String[] args) {
-		String s = "i like this program very much ";
-
-		char[] p = reverseWords(s.toCharArray());
-		System.out.print(p);
+		String sentence = "Everything is reverse";
+		RevStr revStr = new RevStr();// creating an instance of the class RevStr in order to make static reference to
+										// method reverseByWords(String) from the type RevStr.
+		String out = revStr.reverseByWords(sentence); // calling the method on this instance
+		System.out.println(out);
 	}
+
 }
